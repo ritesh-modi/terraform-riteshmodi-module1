@@ -52,5 +52,5 @@ output myoutput3 {
 }
 
 output myoutput4 {
-    value = mymodule1.mymodule1.myoutput1
+    value = module.mymodule1.myoutput1
 }
