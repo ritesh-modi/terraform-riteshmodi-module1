@@ -38,6 +38,6 @@ output myoutput2 {
     value = azurerm_resource_group.myrg.id
 }
 
-output myoutput2 {
+output myoutput3 {
     value = azurerm_resource_group.myrg
 }
