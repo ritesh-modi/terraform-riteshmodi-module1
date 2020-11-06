@@ -15,6 +15,15 @@ variable location2 {
     type = "string"
 }
 
+module mymodule1 {
+    source = "github.com/ritesh-modi/terraform-modules//modules/module1?ref=master"
+
+    rgname1 = "rgmodule1"
+    rgname2 = "rgmodule2"
+    location1 = "west us"
+    location2 = "west us2"
+}
+
 resource azurerm_resource_group myrg {
     name= var.rgname1
     location  = var.location1
@@ -40,4 +49,8 @@ output myoutput2 {
 
 output myoutput3 {
     value = azurerm_resource_group.myrg
+}
+
+output myoutput4 {
+    value = mymodule1.mymodule1.myoutput1
 }
